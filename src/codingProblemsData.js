@@ -15,6 +15,10 @@ const mediumLevelProblems = [
 
 const mediumLevelSolutions = ["best! the are Shrimps", "263", "love", "I Hope I'm Your Favourite Pet. Don't Tell Your Cat!"]
 
-const hardLevelProblems = ["An isogram is a word that has no repeating letters, consecutive or non-consecutive. Implement a function that determines whether a string that contains only letters is an isogram. Assume the empty string is an isogram. Ignore letter case.\nCall your function on the word: 'ambidextrously'. It should return 'true'", "Implement a function that accepts 3 integer values a, b, c. The function should return true if a triangle can be built with the sides of given length and false in any other case. Note that all triangles must have surface greater than 0 to be accepted.\nTest it on the values: 2, 5, 11. The function should return 'false'", "Write a function that generates factors for a given number. The function takes an integer as parameter and returns a list of integers. That list contains the prime factors in numerical sequence.\nCall it on the number 12.\nExamples:\n1  ==> [],\n3  ==>  [3],\n8  ==>  [2, 2, 2],\n9  ==>  [3, 3],\n12 ==>  [2, 2, 3]"];
+const hardLevelProblems = [
+    "An isogram is a word that has no repeating letters, consecutive or non-consecutive. Implement a function that determines whether a string that contains only letters is an isogram. Assume the empty string is an isogram. Ignore letter case.\nCall your function on the word: 'ambidextrously'. It should return 'true'", 
+    "Implement a function that accepts 3 integer values a, b, c. The function should return true if a triangle can be built with the sides of given length and false in any other case. Note that all triangles must have surface greater than 0 to be accepted.\nTest it on the values: 2, 5, 11. The function should return 'false'", 
+    "Write a function that generates factors for a given number. The function takes an integer as parameter and returns a list of integers. That list contains the prime factors in numerical sequence.\nCall it on the number 12.\nExamples:\n1  ==> [],\n3  ==>  [3],\n8  ==>  [2, 2, 2],\n9  ==>  [3, 3],\n12 ==>  [2, 2, 3]"
+];
 
 const hardLevelSolutions = ["true", "false", "[2, 2, 3]"]
