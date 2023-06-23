@@ -21,4 +21,6 @@ const hardLevelProblems = [
     "Write a function that generates factors for a given number. The function takes an integer as parameter and returns a list of integers. That list contains the prime factors in numerical sequence.\nCall it on the number 12.\nExamples:\n1  ==> [],\n3  ==>  [3],\n8  ==>  [2, 2, 2],\n9  ==>  [3, 3],\n12 ==>  [2, 2, 3]"
 ];
 
-const hardLevelSolutions = ["true", "false", "[2, 2, 3]"]
+const hardLevelSolutions = ["true", "false", "[2, 2, 3]"];
+
+export { easyLevelProblems, easyLevelSolutions, mediumLevelProblems, mediumLevelSolutions, hardLevelProblems, hardLevelSolutions };
