@@ -1,25 +1,28 @@
 import { Button } from "@mui/material";
+import { Routes, Route, Link } from 'react-router-dom';
 
 function Home() {
     return (
         <div className="home">
             <h1>Welcome!</h1>
             <p>
-                Grow your own digital coding pet<br/><br/>
-                As coders, we often don't have time to feed ourselves<br/><br/>
-                This pet was developed with YOUR lifestyle in mind!<br/>
-                That's why it only eats code :3
+                Say 👋 to your own <b>digital coding pet</b>.<br/><br/>
+                As coders, we often don't have ⏳ to feed ourselves.<br/><br/>
+                This pet was developed with <b>YOUR lifestyle</b> in mind!<br/><br />
+                That's why it only eats code 👾
             </p>
             <Button
-            sx={{ 
-                backgroundColor: "#CCAFD5",
-                ":hover": {
-                    bgcolor: "#BF9ACA"
-                } 
-            }}
+            // sx={{ 
+            //     backgroundColor: "#d3e2cf",
+            //     color: "#654d97",
+            //     ":hover": {
+            //         bgcolor: "#BF9ACA"
+            //     } 
+            // }}
             variant="contained"
+            
             >
-                START
+                <b>START</b>
             </Button>
         </div>
     )

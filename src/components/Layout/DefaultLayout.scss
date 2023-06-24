@@ -5,4 +5,25 @@
 body {
     margin: 0 auto;
     text-align: center;
+    background-color: #94859c;
+    color: #e4d1cb
+}
+
+h1 {
+    font-family: 'Press Start 2P', cursive;
+}
+
+p {
+    font-family: 'Ubuntu Mono', monospace;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.MuiButton-contained {
+    font-family: 'Inder', sans-serif !important;
+    font-size: 1.3rem !important;
+    padding: 0.3rem 1.5rem !important;
+    background-color: #c68571 !important;
+    color: #e8ded6 !important;
+    // background-color: #c2ded2 !important;
 }
