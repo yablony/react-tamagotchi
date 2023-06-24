@@ -1,17 +1,18 @@
 import { useState } from 'react';
-import { easyLevelProblems, easyLevelSolutions, mediumLevelProblems, mediumLevelSolutions, hardLevelProblems, hardLevelSolutions } from './data/CodingProblemsData';
+import { problems, solutions } from './data/CodingProblemsData';
 
 function CodingProblems() {
     const difficultyLevel = 'easy';
     const result = '';
 
-    let randomProblemIndex = Math.floor(Math.random()* easyLevelProblems.length);
+    let randomProblemIndex = Math.floor(Math.random()* problems.easy.length);
 
-    let randomProblem = easyLevelProblems[randomProblemIndex];
+    let randomProblem = problems.easy[randomProblemIndex];
 
     const userInput = () => {
         
     }
+    
     const compareSolution = () => {
         const userInput = document.querySelector('textarea');
         if (userInput !== null) {
@@ -26,7 +27,7 @@ function CodingProblems() {
             <p>{randomProblem}</p>
             <label>Type your answer below:</label>
             <textarea
-            onChange={readUserInput()}
+            // onChange={readUserInput()}
             cols="30"
             rows="10"
             ></textarea>
