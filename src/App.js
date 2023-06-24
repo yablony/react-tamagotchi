@@ -1,11 +1,13 @@
-import CodingProblems from "./components/CodingProblems";
+import CodingProblems from "./components/Pages/CodingProblems";
 import Spline from '@splinetool/react-spline';
+import Home from './components/Pages/Home';
 
 function App() {
   return (
     <>
-    <CodingProblems />
-    <Spline scene="https://prod.spline.design/SsTNodEztniOUOvz/scene.splinecode" />
+    <Home />
+    {/* <CodingProblems /> */}
+    {/* <Spline scene="https://prod.spline.design/SsTNodEztniOUOvz/scene.splinecode" /> */}
     </>
   );
 }

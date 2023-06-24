@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { problems, solutions } from './data/CodingProblemsData';
+import { problems, solutions } from '../data/CodingProblemsData';
 
 function CodingProblems() {
     const difficultyLevel = 'easy';
