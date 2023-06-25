@@ -2,6 +2,7 @@ import difficultyLevel from './EggSelection';
 import { Button } from "@mui/material";
 import { useNavigate } from 'react-router-dom';
 import Spline from '@splinetool/react-spline';
+import '../Layout/Pet.scss';
 
 // 2. Add a text bubble
 
