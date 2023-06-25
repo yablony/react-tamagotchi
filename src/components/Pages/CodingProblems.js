@@ -1,8 +1,9 @@
 import { useState } from 'react';
 import { problems, solutions } from '../data/CodingProblemsData';
 
-function CodingProblems() {
-    const difficultyLevel = 'easy';
+function CodingProblems({ difficulty }) {
+    const difficultyLevel = difficulty;
+    console.log(difficultyLevel)
     const result = '';
 
     let randomProblemIndex = Math.floor(Math.random()* problems.easy.length);

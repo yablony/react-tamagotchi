@@ -1,6 +1,7 @@
 .eggs-display {
     display: flex;
     justify-content: center;
+    min-height: 176px;
 
     .egg {
         max-width: 10rem;

@@ -3,6 +3,7 @@ import { Button } from "@mui/material";
 import { useNavigate } from 'react-router-dom';
 import '../Layout/EggSelection.scss';
 import { useState } from 'react';
+import CodingProblems from './CodingProblems';
 
 function EggSelection() {
     const navigate = useNavigate();
@@ -12,6 +13,8 @@ function EggSelection() {
         setDifficultyLevel(difficulty);
     }
 
+    console.log(difficultyLevel)
+
     return(
         <div className="eggs">
             <h2>Select your egg</h2>
@@ -20,7 +23,12 @@ function EggSelection() {
             <section className="eggs-display">
                 <div className="egg">
                     <Spline 
-                    onClick={() => updateDifficultyLevel('easy')}
+                    onClick={() => {
+                        updateDifficultyLevel('easy');
+                        <CodingProblems
+                        difficulty={difficultyLevel}
+                        /> 
+                    }}
                     className="easy"
                     scene="https://prod.spline.design/niTRfOHUaCaNPIaq/scene.splinecode" /> 
                     <h4>NO SAUCE</h4>
@@ -52,7 +60,7 @@ function EggSelection() {
                 </Button>
                 <Button
                 variant="contained"
-                onClick={() => navigate('/pet')}
+                onClick={() => navigate('/pet/')}
                 >
                     <b>CONTINUE →</b>
                 </Button>

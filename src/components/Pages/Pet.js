@@ -4,8 +4,6 @@ import { useNavigate } from 'react-router-dom';
 import Spline from '@splinetool/react-spline';
 import '../Layout/Pet.scss';
 
-// 2. Add a text bubble
-
 function Pet () {
     const navigate = useNavigate();
     console.log(difficultyLevel)
@@ -27,7 +25,7 @@ function Pet () {
                 </Button>
                 <Button
                 variant="contained"
-                onClick={() => navigate('/feed')}
+                onClick={() => navigate('/coding-problem')}
                 >
                     <b>FEED</b>
                 </Button>
