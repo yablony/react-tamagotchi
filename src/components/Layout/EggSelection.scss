@@ -1,0 +1,16 @@
+.eggs-display {
+    display: flex;
+    justify-content: center;
+
+    .egg {
+        max-width: 10rem;
+        max-height: 10rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    h4 {
+        margin-top: 0;
+    }
+}

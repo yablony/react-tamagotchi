@@ -10,7 +10,8 @@ body {
 }
 
 h1,
-h2 {
+h2,
+h4 {
     font-family: 'Press Start 2P', cursive;
 }
 
@@ -26,4 +27,15 @@ p {
     padding: 0.3rem 1.5rem !important;
     background-color: #c68571 !important;
     color: #e8ded6 !important;
+}
+
+nav {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+
+    .MuiButton-contained {
+        font-size: 1.1rem !important;
+    }
 }
