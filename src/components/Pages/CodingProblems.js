@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { problems, solutions } from '../data/CodingProblemsData';
+import '../Layout/CodingProblems.scss';
 
 function CodingProblems({ difficulty }) {
     const difficultyLevel = difficulty;
@@ -23,9 +24,10 @@ function CodingProblems({ difficulty }) {
     }
 
     return (
-        <>
+        <div className="coding-challenges">
         <section className="coding-problem">
-            <p>{randomProblem}</p>
+            <h2>Time to eat!</h2>
+            <p><b>CODING CHALLENGE:</b><br/><br/>{randomProblem}</p>
             <label>Type your answer below:</label>
             <textarea
             // onChange={readUserInput()}
@@ -37,7 +39,7 @@ function CodingProblems({ difficulty }) {
         <section className="solution-result">
             <p>{result}</p>
         </section>
-        </>
+        </div>
     )
 }
 

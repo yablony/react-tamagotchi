@@ -44,7 +44,7 @@ function Pet () {
                     <b>FEED</b>
                 </Button>
                 <Backdrop
-                    sx={{ color: '#fff', zIndex: (theme) => 1 }}
+                    sx={{ color: '#fff', zIndex: 1 }}
                     open={open}
                     onClick={handleClose}
                 >

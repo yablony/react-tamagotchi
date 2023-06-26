@@ -8,7 +8,7 @@ function FeedThePet() {
         <div className="pop-up">
         <h1>Feed your shrimp</h1>
         <p>
-            You rcreature feeds on good code.<br/>
+            Your creature feeds on good code.<br/>
             Complete a challenge and watch it grow!<br/>
         </p>
         <Button
