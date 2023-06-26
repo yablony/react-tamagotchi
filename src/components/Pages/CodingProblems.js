@@ -2,21 +2,21 @@ import { useState } from 'react';
 import { problems, solutions } from '../data/CodingProblemsData';
 import '../Layout/CodingProblems.scss';
 import { Button } from "@mui/material";
+import TestSolution from './Test';
 
 function CodingProblems({ difficultyLevel, setDifficultyLevel }) {
-    difficultyLevel = 'easy'
+    difficultyLevel = 'easy';
     const userInput = document.querySelector('textarea');
 
     let randomProblemIndex = Math.floor(Math.random()* problems[difficultyLevel].length);
-
     let randomProblem = problems[difficultyLevel][randomProblemIndex];
     
-    const testSolution = () => {
-        if (userInput !== null) {
-            let userInputText = userInput.value;
-            return <p>{eval(userInputText)}</p>
-        }
-    }
+    // const testSolution = () => {
+    //     if (userInput !== null) {
+    //         let userInputText = userInput.value;
+    //         return <p>{eval(userInputText)}</p>
+    //     }
+    // }
 
     const compareSolution = () => {
         if (userInput !== null) {
@@ -48,7 +48,7 @@ function CodingProblems({ difficultyLevel, setDifficultyLevel }) {
             <nav>
                 <Button
                     variant="contained"
-                    onClick={() => testSolution()}
+                    onClick={() => TestSolution()}
                     >
                         <b>Test</b>
                 </Button>
@@ -61,7 +61,7 @@ function CodingProblems({ difficultyLevel, setDifficultyLevel }) {
             </nav>
         </section>
         <section className="solution-result">
-            {testSolution()}
+            <TestSolution />
         </section>
         </div>
     )
