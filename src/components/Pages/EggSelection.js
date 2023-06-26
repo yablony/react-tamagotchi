@@ -18,7 +18,7 @@ function EggSelection() {
     return(
         <div className="eggs">
             <h2>Select your egg</h2>
-            <p>The egg determines the <b>difficulty level</b> of the game</p>
+            <p>The egg determines the <b>difficulty level</b> of the game.</p>
 
             <section className="eggs-display">
                 <div className="egg">

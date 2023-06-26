@@ -1,14 +1,29 @@
+.eggs {
+    p {
+        margin-bottom: 0.5rem;
+    }
+}
+
 .eggs-display {
     display: flex;
     justify-content: center;
-    min-height: 176px;
+    flex-wrap: wrap;
+    
 
     .egg {
         max-width: 10rem;
         max-height: 10rem;
+        min-height: 160px;
+        min-width: 160px;
         display: flex;
         flex-direction: column;
         justify-content: center;
+        margin-top: 1.5rem;
+    }
+
+    canvas {
+        min-height: 160px;
+        min-width: 160px;
     }
 
     h4 {
