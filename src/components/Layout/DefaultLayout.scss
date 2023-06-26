@@ -9,13 +9,19 @@ body {
     color: #e4d1cb
 }
 
+.App {
+    display: flex;
+    justify-content: center;
+}
+
 h1,
 h2,
 h4 {
     font-family: 'Press Start 2P', cursive;
 }
 
-p {
+p,
+label {
     font-family: 'Ubuntu Mono', monospace;
     margin-top: 2rem;
     margin-bottom: 2rem;

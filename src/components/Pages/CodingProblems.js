@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { problems, solutions } from '../data/CodingProblemsData';
 import '../Layout/CodingProblems.scss';
+import { Button } from "@mui/material";
 
 function CodingProblems({ difficulty }) {
     const difficultyLevel = difficulty;
@@ -26,19 +27,27 @@ function CodingProblems({ difficulty }) {
     return (
         <div className="coding-challenges">
         <section className="coding-problem">
-            <h2>Time to eat!</h2>
+            <h2>Time to code!</h2>
             <p><b>CODING CHALLENGE:</b><br/><br/>{randomProblem}</p>
-            <label>Type your answer below:</label>
-            <textarea
-            // onChange={readUserInput()}
-            cols="30"
-            rows="10"
-            ></textarea>
-            <button onClick={compareSolution()}>Feed the code</button>
+            <div className="solution">
+                <label><b>YOUR ANSWER:</b></label>
+                <textarea
+                // onChange={readUserInput()}
+                    cols="30"
+                    rows="10"
+                ></textarea>
+            </div>
+
+            <Button
+                variant="contained"
+                onClick={compareSolution()}
+                >
+                    <b>Feed the code</b>
+            </Button>
         </section>
-        <section className="solution-result">
+        {/* <section className="solution-result">
             <p>{result}</p>
-        </section>
+        </section> */}
         </div>
     )
 }
