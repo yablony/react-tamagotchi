@@ -1,8 +1,10 @@
 import difficultyLevel from './EggSelection';
-import { Button, Backdrop, CircularProgress } from "@mui/material";
-import { useNavigate } from 'react-router-dom';
-import Spline from '@splinetool/react-spline';
+import FeedThePet from './FeedThePet';
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+
+import { Button, Backdrop } from "@mui/material";
+import Spline from '@splinetool/react-spline';
 import '../Layout/Pet.scss';
 
 function Pet () {
@@ -46,19 +48,7 @@ function Pet () {
                     open={open}
                     onClick={handleClose}
                 >
-                    <div className="pop-up">
-                        <h1>Feed your shrimp</h1>
-                        <p>
-                            You rcreature feeds on good code.<br/>
-                            Complete a challenge and watch it grow!<br/>
-                        </p>
-                        <Button
-                            variant="contained"
-                            onClick={() => navigate('/coding-problem')}
-                            >
-                                START CHALLENGE
-                        </Button>
-                    </div>
+                    <FeedThePet />
                 </Backdrop>
             </nav>
         </div>
