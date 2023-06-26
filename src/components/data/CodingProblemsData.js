@@ -18,7 +18,7 @@ const problems = {
 }
 
 const solutions = {
-    'easy': ["0, 2, 4, 6, 8, 10", "12", "[5, 4, 3, 2, 1]"],
+    'easy': ["function printEvenNumbers() { for (let i = 0; i <= 10; i += 2) { console.log(i); } } printEvenNumbers();", "'happy shrimp'.length", "[1, 2, 3, 4, 5].reverse()"],
     'medium': ["best! the are Shrimps", "263", "love", "I Hope I'm Your Favourite Pet. Don't Tell Your Cat!"],
     'hard': ["true", "false", "[2, 2, 3]"]
 }

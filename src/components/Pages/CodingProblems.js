@@ -3,24 +3,27 @@ import { problems, solutions } from '../data/CodingProblemsData';
 import '../Layout/CodingProblems.scss';
 import { Button } from "@mui/material";
 
-function CodingProblems({ difficulty }) {
-    const difficultyLevel = difficulty;
-    console.log(difficultyLevel)
-    const result = '';
+function CodingProblems({ difficultyLevel, setDifficultyLevel }) {
+    difficultyLevel = 'easy'
+    // const result = '';
 
-    let randomProblemIndex = Math.floor(Math.random()* problems.easy.length);
+    let randomProblemIndex = Math.floor(Math.random()* problems[difficultyLevel].length);
 
-    let randomProblem = problems.easy[randomProblemIndex];
-
-    const userInput = () => {
-        
-    }
+    let randomProblem = problems[difficultyLevel][randomProblemIndex];
     
     const compareSolution = () => {
         const userInput = document.querySelector('textarea');
+
+
         if (userInput !== null) {
             let userInputText = userInput.value;
-            
+            if (eval(userInputText) == eval(solutions[difficultyLevel][randomProblemIndex])) {
+                console.log('correct');
+            } else {
+                console.log('false')
+            }
+            console.log('solution', eval(solutions[difficultyLevel][randomProblemIndex]))
+            console.log('my answer', eval(userInputText))
         }
     }
 
@@ -40,7 +43,7 @@ function CodingProblems({ difficulty }) {
 
             <Button
                 variant="contained"
-                onClick={compareSolution()}
+                onClick={() => compareSolution()}
                 >
                     <b>Feed the code</b>
             </Button>
