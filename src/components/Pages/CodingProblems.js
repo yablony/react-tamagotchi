@@ -5,19 +5,24 @@ import { Button } from "@mui/material";
 
 function CodingProblems({ difficultyLevel, setDifficultyLevel }) {
     difficultyLevel = 'easy'
-    // const result = '';
+    const userInput = document.querySelector('textarea');
 
     let randomProblemIndex = Math.floor(Math.random()* problems[difficultyLevel].length);
 
     let randomProblem = problems[difficultyLevel][randomProblemIndex];
     
-    const compareSolution = () => {
-        const userInput = document.querySelector('textarea');
-
-
+    const testSolution = () => {
         if (userInput !== null) {
             let userInputText = userInput.value;
-            if (eval(userInputText) == eval(solutions[difficultyLevel][randomProblemIndex])) {
+            return <p>{eval(userInputText)}</p>
+        }
+    }
+
+    const compareSolution = () => {
+        if (userInput !== null) {
+            let userInputText = userInput.value;
+
+            if (eval(userInputText) === eval(solutions[difficultyLevel][randomProblemIndex])) {
                 console.log('correct');
             } else {
                 console.log('false')
@@ -40,17 +45,24 @@ function CodingProblems({ difficultyLevel, setDifficultyLevel }) {
                     rows="10"
                 ></textarea>
             </div>
-
-            <Button
-                variant="contained"
-                onClick={() => compareSolution()}
-                >
-                    <b>Feed the code</b>
-            </Button>
+            <nav>
+                <Button
+                    variant="contained"
+                    onClick={() => testSolution()}
+                    >
+                        <b>Test</b>
+                </Button>
+                <Button
+                    variant="contained"
+                    onClick={() => compareSolution()}
+                    >
+                        <b>Feed the code</b>
+                </Button>
+            </nav>
         </section>
-        {/* <section className="solution-result">
-            <p>{result}</p>
-        </section> */}
+        <section className="solution-result">
+            {testSolution()}
+        </section>
         </div>
     )
 }
