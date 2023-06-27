@@ -2,7 +2,7 @@ const problems = {
     'easy': [
         "Print all even numbers from 0 to 10",
         "Write a function that takes an array as input and returns a string with the elements of the array in a reversed order. Use array methods to solve this problem.\nCall the function on: [1, 2, 3, 4, 5]. It should output: 5, 4, 3, 2, 1",
-        "Create a length converter function.\nCall it on a string 'happy shrimp' 🦐"
+        "Create a length converter function.\nCall it on a string 'happy shrimp' 🦐",
     ],
     'medium': [
         "Write a function that takes a sentence as input and returns a new string with the words reversed. Use string methods to solve this problem.\nCall the function on the sentence: 'Shrimps are the best!'. Expected output: 'best! the are Shrimps'", 
