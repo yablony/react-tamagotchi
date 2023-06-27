@@ -7,8 +7,7 @@ const problems = {
     'medium': [
         "Write a function that takes a sentence as input and returns a new string with the words reversed. Use string methods to solve this problem.\nCall the function on the sentence: 'Shrimps are the best!'. Expected output: 'best! the are Shrimps'", 
         "Write a function to calculate the sum of numbers inside an array.\nCall your function on the array: [17, 67, 145, 34]", 
-        "Write a function that takes a sentence as input and returns the longest word in the sentence. If there are multiple words with the same maximum length, return the first occurrence. You can assume that the sentence doesn't have any punctuation. Use string and array methods to solve this problem.\nCall the function on: 'I love to eat code'. The output should be: 'love'",
-        "Write a function that takes a sentence as input and returns a new sentence with the first letter of each word capitalized. Use string and array methods to solve this problem.\nCall your function on: 'i hope i'm your favourite pet. don't tell your cat!'. The output will be: 'I Hope I'm Your Favourite Pet. Don't Tell Your Cat!'"
+        "Write a function that takes a sentence as input and returns the longest word in the sentence. If there are multiple words with the same maximum length, return the first occurrence. You can assume that the sentence doesn't have any punctuation. Use string and array methods to solve this problem.\nCall the function on: 'I love to eat code'. The output should be: 'love'"
     ],
     'hard': [
         "An isogram is a word that has no repeating letters, consecutive or non-consecutive. Implement a function that determines whether a string that contains only letters is an isogram. Assume the empty string is an isogram. Ignore letter case.\nCall your function on the word: 'ambidextrously'. It should return 'true'", 
@@ -26,8 +25,8 @@ const solutions = {
     'medium': [
         "const reverseWords = sentence => sentence.split(' ').reverse().join(' '); reverseWords('Shrimps are the best!');", 
         "const calculateSum = numbers => numbers.reduce((a, b) => a + b, 0);const inputArray = [17, 67, 145, 34]; calculateSum(inputArray);", 
-        "const findLongestWord = sentence => sentence.split(' ').reduce((longestWord, currentWord) => currentWord.length > longestWord.length ? currentWord : longestWord); findLongestWord('I love to eat code');", 
-        "const capitalizeFirstLetters = sentence => sentence.split(' ').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' '); capitalizeFirstLetters('i hope i'm your favourite pet. don't tell your cat!');"],
+        "const findLongestWord = sentence => sentence.split(' ').reduce((longestWord, currentWord) => currentWord.length > longestWord.length ? currentWord : longestWord); findLongestWord('I love to eat code');"
+    ],
     'hard': [
         "const isIsogram = word => new Set(word.toLowerCase()).size === word.length; isIsogram('ambidextrously');", 
         "const isTrianglePossible = (a, b, c) => a + b > c && a + c > b && b + c > a; isTrianglePossible(2, 5, 11);", 
@@ -36,3 +35,7 @@ const solutions = {
 }
 
 export { problems, solutions };
+
+// CAT
+// "const capitalizeFirstLetters = sentence => sentence.split(' ').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' '); capitalizeFirstLetters('i hope i'm your favourite pet. don't tell your cat!');"
+//      "Write a function that takes a sentence as input and returns a new sentence with the first letter of each word capitalized. Use string and array methods to solve this problem.\nCall your function on: 'i hope i'm your favourite pet. don't tell your cat!'. The output will be: 'I Hope I'm Your Favourite Pet. Don't Tell Your Cat!'"
