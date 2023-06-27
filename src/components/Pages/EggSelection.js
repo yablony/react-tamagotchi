@@ -5,15 +5,8 @@ import '../Layout/EggSelection.scss';
 import { useState } from 'react';
 import CodingProblems from './CodingProblems';
 
-function EggSelection() {
+function EggSelection({ difficultyLevel, setDifficultyLevel }) {
     const navigate = useNavigate();
-    const [difficultyLevel, setDifficultyLevel] = useState('');
-
-    const updateDifficultyLevel = difficulty => {
-        setDifficultyLevel(difficulty);
-    }
-
-    console.log(difficultyLevel)
 
     return(
         <div className="eggs">
@@ -23,12 +16,7 @@ function EggSelection() {
             <section className="eggs-display">
                 <div className="egg">
                     <Spline 
-                    onClick={() => {
-                        updateDifficultyLevel('easy');
-                        <CodingProblems
-                        difficulty={difficultyLevel}
-                        /> 
-                    }}
+                    onClick={() => setDifficultyLevel('easy')}
                     className="easy"
                     scene="https://prod.spline.design/niTRfOHUaCaNPIaq/scene.splinecode" /> 
                     <h4>NO SAUCE</h4>
@@ -36,7 +24,7 @@ function EggSelection() {
 
                 <div className="egg">
                     <Spline 
-                    onClick={() => updateDifficultyLevel('medium')}
+                    onClick={() => setDifficultyLevel('medium')}
                     className="medium"
                     scene="https://prod.spline.design/niTRfOHUaCaNPIaq/scene.splinecode" /> 
                     <h4>MILD</h4>
@@ -44,7 +32,7 @@ function EggSelection() {
 
                 <div className="egg">
                     <Spline 
-                    onClick={() => updateDifficultyLevel('hard')}
+                    onClick={() => setDifficultyLevel('hard')}
                     className="hard"
                     scene="https://prod.spline.design/niTRfOHUaCaNPIaq/scene.splinecode" /> 
                     <h4>SPICY</h4>
@@ -61,6 +49,7 @@ function EggSelection() {
                 <Button
                 variant="contained"
                 onClick={() => navigate('/pet/')}
+                disabled={difficultyLevel === ''}
                 >
                     <b>CONTINUE →</b>
                 </Button>

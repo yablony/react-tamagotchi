@@ -4,8 +4,7 @@ import '../Layout/CodingProblems.scss';
 import { Button } from "@mui/material";
 import TestSolution from './Test';
 
-function CodingProblems({ difficultyLevel, setDifficultyLevel }) {
-    difficultyLevel = 'easy';
+function CodingProblems({ difficultyLevel }) {
     const userInput = document.querySelector('textarea');
 
     let randomProblemIndex = Math.floor(Math.random()* problems[difficultyLevel].length);
@@ -22,13 +21,11 @@ function CodingProblems({ difficultyLevel, setDifficultyLevel }) {
         if (userInput !== null) {
             let userInputText = userInput.value;
 
-            if (eval(userInputText) === eval(solutions[difficultyLevel][randomProblemIndex])) {
-                console.log('correct');
+            if (JSON.stringify(eval(userInputText)) === JSON.stringify(eval(solutions[difficultyLevel][randomProblemIndex]))) {
+                return true;
             } else {
-                console.log('false')
+                return false;
             }
-            console.log('solution', eval(solutions[difficultyLevel][randomProblemIndex]))
-            console.log('my answer', eval(userInputText))
         }
     }
 
@@ -50,7 +47,7 @@ function CodingProblems({ difficultyLevel, setDifficultyLevel }) {
                     variant="contained"
                     onClick={() => TestSolution()}
                     >
-                        <b>Test</b>
+                        Test
                 </Button>
                 <Button
                     variant="contained"
@@ -61,7 +58,7 @@ function CodingProblems({ difficultyLevel, setDifficultyLevel }) {
             </nav>
         </section>
         <section className="solution-result">
-            <TestSolution />
+            {/* <TestSolution /> */}
         </section>
         </div>
     )

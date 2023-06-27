@@ -35,6 +35,10 @@ label {
     color: #e8ded6 !important;
 }
 
+.MuiButton-contained.Mui-disabled {
+    background-color: #c8a195 !important;
+}
+
 nav {
     margin-top: 2rem;
     display: flex;

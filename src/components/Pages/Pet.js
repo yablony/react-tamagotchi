@@ -9,7 +9,6 @@ import '../Layout/Pet.scss';
 
 function Pet () {
     const navigate = useNavigate();
-    console.log(difficultyLevel);
 
     const [open, setOpen] = useState(false);
     

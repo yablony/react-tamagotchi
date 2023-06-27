@@ -4,22 +4,27 @@ import Pet from "./components/Pages/Pet";
 import EggSelection from "./components/Pages/EggSelection";
 import FeedThePet from "./components/Pages/FeedThePet";
 import './components/Layout/DefaultLayout.scss';
-import { Routes, Route, Link, useNavigate } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 import { useState } from 'react';
 
 function App() {
   const [difficultyLevel, setDifficultyLevel] = useState('');
+  const [correctCode, setCorrectCode] = useState(false);
 
   return (
     <div className="App">
       <Routes>
         <Route path='/' element={<Home />}></Route>
-        <Route path='/eggs' element={<EggSelection />}></Route>
+        <Route path='/eggs' element={
+        <EggSelection 
+        setDifficultyLevel={setDifficultyLevel}
+        difficultyLevel={difficultyLevel}
+        />}></Route>
         <Route path='/pet/' element={<Pet />}></Route>
         <Route path='/feeding' element={<FeedThePet />}></Route>
         <Route path='/coding-problem' element={<CodingProblems 
         difficultyLevel={difficultyLevel}
-        setDifficultyLevel={setDifficultyLevel}
+        setCorrectCode={setCorrectCode}
         />}></Route>
       </Routes>
     </div>
