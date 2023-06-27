@@ -1,4 +1,3 @@
-import difficultyLevel from './EggSelection';
 import FeedThePet from './FeedThePet';
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
@@ -7,10 +6,12 @@ import { Button, Backdrop } from "@mui/material";
 import Spline from '@splinetool/react-spline';
 import '../Layout/Pet.scss';
 
-function Pet ({ correctCode }) {
+function Pet ({ correctCode, petSize }) {
     const navigate = useNavigate();
     const [open, setOpen] = useState(false);
-    const [size, setSize] = useState(0);
+    let laptopObject = "https://prod.spline.design/NuysJ9Zm5WP4Oife/scene.splinecode";
+
+    console.log('SIZE ', petSize)
     
     const handleClose = () => {
       setOpen(false);
@@ -20,20 +21,22 @@ function Pet ({ correctCode }) {
       setOpen(true);
     };
 
+    if (correctCode === true) {
+        laptopObject = "https://prod.spline.design/6ymHLdoNUJja-ZWU/scene.splinecode";
+    } else if (correctCode === false) {
+        laptopObject = "https://prod.spline.design/9pzmEGpOzzvh3NBZ/scene.splinecode";
+    }
+
     console.log('correctCode', correctCode)
-    if (correctCode === false) {
-        console.log('incorrct')
-    } else if (correctCode === true) {
-        console.log('correct')
-    } 
+
 
     return(
         <div className="pet">
                 <h1>Shrimpy boi</h1>
 
                 <section className="shrimp">
-                <Spline scene="https://prod.spline.design/lQ1KYGirfkeHohde/scene.splinecode" />
-                <h1>🦐</h1>
+                <Spline scene={laptopObject} />
+                <h1 style={{ fontSize: {petSize} }}>🦐</h1>
                 </section>
 
                 <nav>

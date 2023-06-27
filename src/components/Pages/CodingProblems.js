@@ -5,7 +5,7 @@ import { Button } from "@mui/material";
 import TestSolution from './Test';
 import { useNavigate } from 'react-router-dom';
 
-function CodingProblems({ difficultyLevel, setCorrectCode }) {
+function CodingProblems({ difficultyLevel, setCorrectCode, setPetSize, petSize }) {
     const navigate = useNavigate();
 
     let randomProblemIndex = Math.floor(Math.random() * problems[difficultyLevel].length);
@@ -22,13 +22,16 @@ function CodingProblems({ difficultyLevel, setCorrectCode }) {
         const userInput = document.querySelector('textarea');
         let userInputText = userInput.value;
         console.log('userInputText ', userInputText)
-        console.log("user solution: ", eval(userInputText))
-        console.log("solution from datat ", eval(solutions[difficultyLevel][randomProblemIndex]))
+  
         if (eval(userInputText) === eval(solutions[difficultyLevel][randomProblemIndex])) {
             console.log('compareSolution: correct')
+            setPetSize(petSize + 20)
             return true;
         } else {
             console.log('compareSolution: incorrect')
+            if (petSize >= 40) {
+                setPetSize(petSize - 20) 
+            }
             return false;
         }
     }

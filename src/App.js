@@ -9,7 +9,8 @@ import { useState } from 'react';
 
 function App() {
   const [difficultyLevel, setDifficultyLevel] = useState('');
-  const [correctCode, setCorrectCode] = useState(false);
+  const [correctCode, setCorrectCode] = useState(null);
+  const [petSize, setPetSize] = useState(20);
 
   return (
     <div className="App">
@@ -22,11 +23,14 @@ function App() {
         />}></Route>
         <Route path='/pet' element={<Pet 
         correctCode={correctCode}
+        petSize={petSize}
         />}></Route>
         <Route path='/feeding' element={<FeedThePet />}></Route>
         <Route path='/coding-problem' element={<CodingProblems 
         difficultyLevel={difficultyLevel}
         setCorrectCode={setCorrectCode}
+        setPetSize={setPetSize}
+        petSize={petSize}
         />}></Route>
       </Routes>
     </div>
