@@ -36,7 +36,7 @@ function Pet ({ correctCode, petSize }) {
 
                 <section className="shrimp">
                 <Spline scene={laptopObject} />
-                <h1 style={{ fontSize: {petSize} }}>🦐</h1>
+                <h1 style={{ fontSize: petSize }}>🦐</h1>
                 </section>
 
                 <nav>
