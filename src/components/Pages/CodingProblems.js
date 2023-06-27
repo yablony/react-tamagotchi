@@ -3,11 +3,12 @@ import { problems, solutions } from '../data/CodingProblemsData';
 import '../Layout/CodingProblems.scss';
 import { Button } from "@mui/material";
 import TestSolution from './Test';
+import { useNavigate } from 'react-router-dom';
 
-function CodingProblems({ difficultyLevel }) {
-    const userInput = document.querySelector('textarea');
+function CodingProblems({ difficultyLevel, setCorrectCode }) {
+    const navigate = useNavigate();
 
-    let randomProblemIndex = Math.floor(Math.random()* problems[difficultyLevel].length);
+    let randomProblemIndex = Math.floor(Math.random() * problems[difficultyLevel].length);
     let randomProblem = problems[difficultyLevel][randomProblemIndex];
     
     // const testSolution = () => {
@@ -18,14 +19,16 @@ function CodingProblems({ difficultyLevel }) {
     // }
 
     const compareSolution = () => {
-        if (userInput !== null) {
-            let userInputText = userInput.value;
+        const userInput = document.querySelector('textarea');
+        let userInputText = userInput.value;
+        console.log('userInputText ', userInputText)
 
-            if (JSON.stringify(eval(userInputText)) === JSON.stringify(eval(solutions[difficultyLevel][randomProblemIndex]))) {
-                return true;
-            } else {
-                return false;
-            }
+        if (eval(userInputText) === eval(solutions[difficultyLevel][randomProblemIndex])) {
+            console.log('compareSolution: correct')
+            return true;
+        } else {
+            console.log('compareSolution: incorrect')
+            return false;
         }
     }
 
@@ -51,7 +54,10 @@ function CodingProblems({ difficultyLevel }) {
                 </Button>
                 <Button
                     variant="contained"
-                    onClick={() => compareSolution()}
+                    onClick={() => {
+                        setCorrectCode(compareSolution());
+                        navigate('/pet');
+                    }}
                     >
                         <b>Feed the code</b>
                 </Button>

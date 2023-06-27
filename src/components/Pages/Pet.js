@@ -7,10 +7,10 @@ import { Button, Backdrop } from "@mui/material";
 import Spline from '@splinetool/react-spline';
 import '../Layout/Pet.scss';
 
-function Pet () {
+function Pet ({ correctCode }) {
     const navigate = useNavigate();
-
     const [open, setOpen] = useState(false);
+    const [size, setSize] = useState(0);
     
     const handleClose = () => {
       setOpen(false);
@@ -19,6 +19,13 @@ function Pet () {
     const handleOpen = () => {
       setOpen(true);
     };
+
+    console.log('correctCode', correctCode)
+    if (correctCode === false) {
+        console.log('incorrct')
+    } else if (correctCode === true) {
+        console.log('correct')
+    } 
 
     return(
         <div className="pet">
@@ -38,14 +45,14 @@ function Pet () {
                 </Button>
                 <Button
                 variant="contained"
-                onClick={handleOpen}
+                onClick={() => handleOpen()}
                 >
                     <b>FEED</b>
                 </Button>
                 <Backdrop
                     sx={{ color: '#fff', zIndex: 1 }}
                     open={open}
-                    onClick={handleClose}
+                    onClick={() => handleClose()}
                 >
                     <FeedThePet />
                 </Backdrop>

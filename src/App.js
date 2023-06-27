@@ -20,7 +20,9 @@ function App() {
         setDifficultyLevel={setDifficultyLevel}
         difficultyLevel={difficultyLevel}
         />}></Route>
-        <Route path='/pet/' element={<Pet />}></Route>
+        <Route path='/pet' element={<Pet 
+        correctCode={correctCode}
+        />}></Route>
         <Route path='/feeding' element={<FeedThePet />}></Route>
         <Route path='/coding-problem' element={<CodingProblems 
         difficultyLevel={difficultyLevel}

@@ -1,8 +1,8 @@
 const problems = {
     'easy': [
-        "Print all even numbers from 0 to 10", 
-        "Create a length converter function.\nCall it on a string 'happy shrimp' 🦐", 
-        "Write a function that takes an array as input and returns a new array with the elements reversed. Use array methods to solve this problem.\nCall the function on: [1, 2, 3, 4, 5]. It should output: [5, 4, 3, 2, 1]"
+        "Print all even numbers from 0 to 10",
+        "Write a function that takes an array as input and returns a string with the elements of the array in a reversed order. Use array methods to solve this problem.\nCall the function on: [1, 2, 3, 4, 5]. It should output: 5, 4, 3, 2, 1",
+        "Create a length converter function.\nCall it on a string 'happy shrimp' 🦐"
     ],
     'medium': [
         "Write a function that takes a sentence as input and returns a new string with the words reversed. Use string methods to solve this problem.\nCall the function on the sentence: 'Shrimps are the best!'. Expected output: 'best! the are Shrimps'", 
@@ -18,7 +18,11 @@ const problems = {
 }
 
 const solutions = {
-    'easy': ["function printEvenNumbers() { for (let i = 0; i <= 10; i += 2) { console.log(i); } } printEvenNumbers();", "'happy shrimp'.length", "[1, 2, 3, 4, 5].reverse()"],
+    'easy': [
+        "function printEvenNumbers() { let array = []; for (let i = 0; i <= 10; i += 2) { array.push(i);} return array.join(', ')} printEvenNumbers();",
+        "[1, 2, 3, 4, 5].reverse().join(', ')",
+        "'happy shrimp'.length"
+    ],
     'medium': ["best! the are Shrimps", "263", "love", "I Hope I'm Your Favourite Pet. Don't Tell Your Cat!"],
     'hard': ["true", "false", "[2, 2, 3]"]
 }
