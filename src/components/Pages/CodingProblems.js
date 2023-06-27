@@ -22,7 +22,8 @@ function CodingProblems({ difficultyLevel, setCorrectCode }) {
         const userInput = document.querySelector('textarea');
         let userInputText = userInput.value;
         console.log('userInputText ', userInputText)
-
+        console.log("user solution: ", eval(userInputText))
+        console.log("solution from datat ", eval(solutions[difficultyLevel][randomProblemIndex]))
         if (eval(userInputText) === eval(solutions[difficultyLevel][randomProblemIndex])) {
             console.log('compareSolution: correct')
             return true;
