@@ -12,14 +12,14 @@ function CodingProblems({ difficultyLevel, setCorrectCode, setPetSize, petSize }
     let randomProblemIndex = Math.floor(Math.random() * problems[difficultyLevel].length);
     let randomProblem = problems[difficultyLevel][randomProblemIndex];
     
-    const testSolution = () => {
+    const testUserInput = () => {
         const userInput = document.querySelector('textarea');
         let userInputText = userInput.value;
 
-        if (userInputText !== null) {
+        if (userInputText !== '') {
             setTestResult(eval(userInputText))
         } else {
-            setTestResult("We can't test your answer if it's empty :(")
+            setTestResult(`We can't test your answer if it's empty :(`)
         }
     }
 
@@ -54,7 +54,7 @@ function CodingProblems({ difficultyLevel, setCorrectCode, setPetSize, petSize }
             <nav>
                 <Button
                     variant="contained"
-                    onClick={() => testSolution()}
+                    onClick={() => testUserInput()}
                     >
                         Test
                 </Button>
@@ -69,10 +69,9 @@ function CodingProblems({ difficultyLevel, setCorrectCode, setPetSize, petSize }
                 </Button>
             </nav>
         </section>
-        <section className="test-result">
-            <label>You can test your code here, but it's best to be done in the console</label>
-            <p><b>Output</b>: {testResult}</p>
-        </section>
+        <TestSolution 
+        testResult={testResult}
+        />
         </div>
     )
 }
