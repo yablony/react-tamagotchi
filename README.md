@@ -1,7 +1,7 @@
 # TAMAGOTCHI APP :space_invader:
 A digital pet made specifically for programmers because the only thing this pet eats is good JavaScript code! The pet's character was inspired by the posture of a shrimp that may result due to prolonged hours spent coding in front of the computer 🦐
 
-## :computer: [Click here](https://react-tamagotchi.surge.sh/) to feed your pet
+## :computer: [Click here](https://react-tamagotchi.surge.sh/) to start playing!
 
 ## :page_facing_up: About
 This project was unique from my previous experiences as I had a client who provided me with specific requirements for the Tamagotchi app. The client's requirements included:
@@ -26,7 +26,7 @@ In addition to meeting the client's requirements, I set a personal goal to focus
 6. You can test your code by pressing the 'Test' button and once you are satisfied click 'Feed the code' to feed it to your pet.
 7. Your pet will grow (or not) and let you know if it's happy with its meal. Remember, it only eats good code!
 
-<img src="./resources/app_preview.png" alt="image of the app preview" width="auto" height="auto">
+<img src="./resources/app_preview.png" alt="image of the app preview" width="auto" height="500px">
 
 ## :pencil2: Planning & Problem Solving
 **Wireframes:**
