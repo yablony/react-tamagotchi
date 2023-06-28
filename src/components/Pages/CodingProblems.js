@@ -44,7 +44,6 @@ function CodingProblems({ difficultyLevel, setCorrectCode, setPetSize, petSize }
             <div className="solution">
                 <label><b>YOUR ANSWER:</b></label>
                 <textarea
-                // onChange={readUserInput()}
                     cols="30"
                     rows="10"
                 ></textarea>
