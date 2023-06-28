@@ -4,6 +4,19 @@ A digital pet made specifically for programmers because the only thing this pet 
 ## :computer: [Click here](https://react-tamagotchi.surge.sh/) to feed your pet
 
 ## :page_facing_up: About
+This project was unique from my previous experiences as I had a client who provided me with specific requirements for the Tamagotchi app. The client's requirements included:
+- Create a selection of coding challenges (or use an API)
+- User should be able to choose a difficulty setting
+- Display a visually appealing creature
+- Code challenge to be displayed to the user, with instructions
+- User should have an input for code to be submitted
+- Correct code causes the creature to grow and say a positive comment
+- Bad code causing the creature to shrink and verbalize its disgust
+
+Throughout the development process, I followed an iterative approach to meet the Minimum Viable Product (MVP) first and then worked on implementing additional features. I regularly communicated with my client and provided daily progress updates to ensure their requirements were met.
+
+In addition to meeting the client's requirements, I set a personal goal to focus on creating a pleasant design for the app. This allowed me to go beyond the content covered in the course and further develop my skills in reading documentation and implementing visually appealing interfaces.
+
 **How to use the app:**
 1. Press 'Start' on the landing page to start the game.
 2. Next select the difficulty of the game, which in turn determines the difficulty of the coding problems you'll be asked to solve. Please note that you won't be able to proceed unles the difficulty is selected.
@@ -16,21 +29,32 @@ A digital pet made specifically for programmers because the only thing this pet 
 <img src="./resources/app_preview.png" alt="image of the app preview" width="auto" height="auto">
 
 ## :pencil2: Planning & Problem Solving
-The work on this project commenced with a detailed plan on how we want our app to look, what functionality it will have and what tools we need to set up to get started with it.
+**Wireframes**
+Before beginning the development process, I started by creating wireframes to visualize the layout and structure of the Tamagotchi app. The wireframes helped me plan the placement of different components and ensure a user-friendly interface. 
+![image of the wireframes for the app](./resources/wireframes.png)
 
-First, the functionality of the app was written in the form of user stories that were later used in the Trello app to assign responsibilites and tasks amongs the members of the group. 
-![image of the user stories for the app](./resources/user_stories.png)
+**App Architecture**
+To ensure a well-structured and maintainable codebase, I designed the architecture of the Tamagotchi app. I followed a modular approach, separating different functionalities into components as you will not in my codebase. This allowed for easier development, debugging, and future enhancements. 
+![image of the architecture for the app](./resources/architecture.png)
 
-Then the wireframes for the app were put together:
-![image of the wireframes for the app](./resources/wire-frame.png)
-![image of the wireframes for the app](./resources/Project_3,_Entry,_SignUp,_Login.png)
+**User Stories**
+To ensure a user-friendly and intuitive user experience, I created user stories based on the client's requirements. User stories helped me define the features and interactions necessary to meet the client's expectations. Here are some example user stories:
+- As a user, I want to be greeted by the game when I open the app.
+- As a user, I want to see a visually appealing shrimp-like creature and a button indicating food on the screen after selecting an egg.
+- As a user, I want to click the "start challenge" button to display a JavaScript coding challenge with instructions.
+- As a user, I want to have an input field where I can enter my solution under the challenge instructions.
+- As a user, I want to click the "feed code" button next to the input to check my solution and see the creature's reaction.
 
-The app needed to have a database set up that consists of two tables of user and quote data with an extra table for the favourite quotes as a future feature:
-![image of the database relationships for the app](./resources/1-many.png)
+**Problem Solving Approach**
+During the development process, I adopted a systematic approach to problem-solving. For more complex problems or issues, I followed these steps:
 
-The GitHub repositary was set up to allow us to code and work as a group on the app. Version control and repo branches became our best friends in this journey. One member was nominated as a Git Leader who managed the merging of work on Git and everyone else was collaborating by using pull requests. We learnt how to work together efficiently and not overlap our code.
+1. *Identifying the Problem:* I first identified the specific problem or issue I encountered. This involved thoroughly understanding the desired behavior and comparing it to the actual behavior of the app.
+2. *Hypothesis:* After identifying the problem, I formulated a hypothesis about the possible cause or solution. This helped me have a clear direction in addressing the issue.
+3. *Testing:* I tested my hypothesis by making small changes to the code, implementing potential solutions, or debugging specific parts of the app. I documented the changes I made and carefully observed the outcomes.
+4. *Outcome:* I recorded the outcomes of each test or change made. This included whether the issue was resolved, the impact on other functionalities, or any new issues that arose. This documentation helped me track the progress and maintain an organized troubleshooting process.
 
-Finally, the app was deployed on Render and any deployment related errors were fixed. 
+By following this problem-solving approach, I aimed to ensure the stability and functionality of the Tamagotchi app throughout its development lifecycle.
+![image of an example of problem solving and recording of cases](./resources/problem_solving.png)
 
 ## :rocket: Cool tech
 - Coding languages: JSX, CSS, JavaScript.
