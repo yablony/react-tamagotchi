@@ -10,8 +10,6 @@ function Pet ({ correctCode, petSize }) {
     const navigate = useNavigate();
     const [open, setOpen] = useState(false);
     let laptopObject = "https://prod.spline.design/NuysJ9Zm5WP4Oife/scene.splinecode";
-
-    console.log('SIZE ', petSize)
     
     const handleClose = () => {
       setOpen(false);
@@ -26,9 +24,6 @@ function Pet ({ correctCode, petSize }) {
     } else if (correctCode === false) {
         laptopObject = "https://prod.spline.design/9pzmEGpOzzvh3NBZ/scene.splinecode";
     }
-
-    console.log('correctCode', correctCode)
-
 
     return(
         <div className="pet">

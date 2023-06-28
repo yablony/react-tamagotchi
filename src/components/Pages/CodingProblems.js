@@ -26,7 +26,6 @@ function CodingProblems({ difficultyLevel, setCorrectCode, setPetSize, petSize }
     const compareSolution = () => {
         const userInput = document.querySelector('textarea');
         let userInputText = userInput.value;
-        console.log('userInputText ', userInputText)
   
         if (eval(userInputText) === eval(solutions[difficultyLevel][randomProblemIndex])) {
             setPetSize(petSize + 20)

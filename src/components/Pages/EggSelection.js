@@ -15,21 +15,21 @@ function EggSelection({ difficultyLevel, setDifficultyLevel }) {
                 <div className="egg" onClick={() => setDifficultyLevel('easy')}>
                     <Spline
                     className="easy"
-                    scene="https://prod.spline.design/niTRfOHUaCaNPIaq/scene.splinecode" /> 
+                    scene="https://prod.spline.design/PfxewiQDiJm3c6pd/scene.splinecode" /> 
                     <h4>NO SAUCE</h4>
                 </div>
 
                 <div className="egg" onClick={() => setDifficultyLevel('medium')}>
                     <Spline 
                     className="medium"
-                    scene="https://prod.spline.design/niTRfOHUaCaNPIaq/scene.splinecode" /> 
+                    scene="https://prod.spline.design/Ykthdbo5buUwmEki/scene.splinecode" /> 
                     <h4>MILD</h4>
                 </div>
 
                 <div className="egg" onClick={() => setDifficultyLevel('hard')}>
                     <Spline 
                     className="hard"
-                    scene="https://prod.spline.design/niTRfOHUaCaNPIaq/scene.splinecode" /> 
+                    scene="https://prod.spline.design/8JyY1-Th8prtv4I8/scene.splinecode" /> 
                     <h4>SPICY</h4>
                 </div>
             </section>
