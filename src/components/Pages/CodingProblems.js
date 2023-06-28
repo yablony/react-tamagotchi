@@ -7,16 +7,21 @@ import { useNavigate } from 'react-router-dom';
 
 function CodingProblems({ difficultyLevel, setCorrectCode, setPetSize, petSize }) {
     const navigate = useNavigate();
+    const [testResult, setTestResult] = useState(null);
 
     let randomProblemIndex = Math.floor(Math.random() * problems[difficultyLevel].length);
     let randomProblem = problems[difficultyLevel][randomProblemIndex];
     
-    // const testSolution = () => {
-    //     if (userInput !== null) {
-    //         let userInputText = userInput.value;
-    //         return <p>{eval(userInputText)}</p>
-    //     }
-    // }
+    const testSolution = () => {
+        const userInput = document.querySelector('textarea');
+        let userInputText = userInput.value;
+
+        if (userInputText !== null) {
+            setTestResult(eval(userInputText))
+        } else {
+            setTestResult("We can't test your answer if it's empty :(")
+        }
+    }
 
     const compareSolution = () => {
         const userInput = document.querySelector('textarea');
@@ -24,11 +29,9 @@ function CodingProblems({ difficultyLevel, setCorrectCode, setPetSize, petSize }
         console.log('userInputText ', userInputText)
   
         if (eval(userInputText) === eval(solutions[difficultyLevel][randomProblemIndex])) {
-            console.log('compareSolution: correct')
             setPetSize(petSize + 20)
             return true;
         } else {
-            console.log('compareSolution: incorrect')
             if (petSize >= 40) {
                 setPetSize(petSize - 20) 
             }
@@ -51,7 +54,7 @@ function CodingProblems({ difficultyLevel, setCorrectCode, setPetSize, petSize }
             <nav>
                 <Button
                     variant="contained"
-                    onClick={() => TestSolution()}
+                    onClick={() => testSolution()}
                     >
                         Test
                 </Button>
@@ -66,8 +69,9 @@ function CodingProblems({ difficultyLevel, setCorrectCode, setPetSize, petSize }
                 </Button>
             </nav>
         </section>
-        <section className="solution-result">
-            {/* <TestSolution /> */}
+        <section className="test-result">
+            <label>You can test your code here, but it's best to be done in the console</label>
+            <p><b>Output</b>: {testResult}</p>
         </section>
         </div>
     )
