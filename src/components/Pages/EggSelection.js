@@ -3,7 +3,7 @@ import { Button } from "@mui/material";
 import { useNavigate } from 'react-router-dom';
 import '../Layout/EggSelection.scss';
 
-function EggSelection({ difficultyLevel, setDifficultyLevel, setCorrectCode }) {
+function EggSelection({ difficultyLevel, setDifficultyLevel, setCorrectCode, setPetSize }) {
     const navigate = useNavigate();
 
     return(
@@ -46,6 +46,7 @@ function EggSelection({ difficultyLevel, setDifficultyLevel, setCorrectCode }) {
                 onClick={() => {
                     navigate('/pet');
                     setCorrectCode(null);
+                    setPetSize(20);
                 }}
                 disabled={difficultyLevel === ''}
                 >

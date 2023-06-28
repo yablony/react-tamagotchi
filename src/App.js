@@ -21,6 +21,7 @@ function App() {
         setDifficultyLevel={setDifficultyLevel}
         difficultyLevel={difficultyLevel}
         setCorrectCode={setCorrectCode}
+        setPetSize={setPetSize}
         />}></Route>
         <Route path='/pet' element={<Pet 
         correctCode={correctCode}

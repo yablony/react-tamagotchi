@@ -7,17 +7,21 @@ import { useNavigate } from 'react-router-dom';
 
 function CodingProblems({ difficultyLevel, setCorrectCode, setPetSize, petSize }) {
     const navigate = useNavigate();
-    const [testResult, setTestResult] = useState(null);
+    const [testResult, setTestResult] = useState();
 
     let randomProblemIndex = Math.floor(Math.random() * problems[difficultyLevel].length);
     let randomProblem = problems[difficultyLevel][randomProblemIndex];
+    console.log('New random problem generated')
     
     const testUserInput = () => {
+        console.log('Test onClick Function runs')
         const userInput = document.querySelector('textarea');
         let userInputText = userInput.value;
 
         if (userInputText !== '') {
-            setTestResult(eval(userInputText))
+            let test = eval(userInputText);
+            console.log(typeof(test))
+            setTestResult(test)
         } else {
             setTestResult(`We can't test your answer if it's empty :(`)
         }
@@ -29,11 +33,13 @@ function CodingProblems({ difficultyLevel, setCorrectCode, setPetSize, petSize }
   
         if (eval(userInputText) === eval(solutions[difficultyLevel][randomProblemIndex])) {
             setPetSize(petSize + 20)
+            console.log('eval() is TRUE')
             return true;
         } else {
             if (petSize >= 40) {
                 setPetSize(petSize - 20) 
             }
+            console.log('eval() is FALSE')
             return false;
         }
     }
@@ -68,9 +74,13 @@ function CodingProblems({ difficultyLevel, setCorrectCode, setPetSize, petSize }
                 </Button>
             </nav>
         </section>
-        <TestSolution 
+        {/* <TestSolution 
         testResult={testResult}
-        />
+        /> */}
+        <section className="test-result">
+            <label>You can test your code here, but it's best to be done in the console</label>
+            <p><b>Output</b>: {testResult}</p>
+        </section>
         </div>
     )
 }

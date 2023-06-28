@@ -35,7 +35,3 @@ const solutions = {
 }
 
 export { problems, solutions };
-
-// CAT
-// "const capitalizeFirstLetters = sentence => sentence.split(' ').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' '); capitalizeFirstLetters('i hope i'm your favourite pet. don't tell your cat!');"
-//      "Write a function that takes a sentence as input and returns a new sentence with the first letter of each word capitalized. Use string and array methods to solve this problem.\nCall your function on: 'i hope i'm your favourite pet. don't tell your cat!'. The output will be: 'I Hope I'm Your Favourite Pet. Don't Tell Your Cat!'"
