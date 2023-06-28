@@ -7,7 +7,7 @@ import Spline from '@splinetool/react-spline';
 import '../Layout/Pet.scss';
 
 function Pet ({ correctCode, petSize }) {
-    console.log('Pet.correctCode ', correctCode)
+    // console.log('Pet.correctCode ', correctCode)
     const navigate = useNavigate();
     const [open, setOpen] = useState(false);
     let laptopObject = "https://prod.spline.design/NuysJ9Zm5WP4Oife/scene.splinecode";

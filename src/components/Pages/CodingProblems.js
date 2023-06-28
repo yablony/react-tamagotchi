@@ -11,17 +11,17 @@ function CodingProblems({ difficultyLevel, setCorrectCode, setPetSize, petSize }
 
     let randomProblemIndex = Math.floor(Math.random() * problems[difficultyLevel].length);
     let randomProblem = problems[difficultyLevel][randomProblemIndex];
-    console.log('randomProblemIndex', randomProblemIndex)
-    console.log('New random problem generated')
+    // console.log('randomProblemIndex', randomProblemIndex)
+    // console.log('New random problem generated')
     
     const testUserInput = () => {
-        console.log('Test onClick Function runs')
+        // console.log('Test onClick Function runs')
         const userInput = document.querySelector('textarea');
         let userInputText = userInput.value;
 
         if (userInputText !== '') {
             let test = eval(userInputText);
-            console.log(typeof(test))
+            // console.log(typeof(test))
             setTestResult(test)
         } else {
             setTestResult(`We can't test your answer if it's empty :(`)
@@ -35,25 +35,25 @@ function CodingProblems({ difficultyLevel, setCorrectCode, setPetSize, petSize }
         if (typeof(eval(solutions[difficultyLevel][randomProblemIndex])) !== 'object') {
             if (eval(userInputText) === eval(solutions[difficultyLevel][randomProblemIndex])) {
                 setPetSize(petSize + 20)
-                console.log('eval() is TRUE')
+                // console.log('eval() is TRUE')
                 return true;
             } else {
                 if (petSize >= 40) {
                     setPetSize(petSize - 20) 
                 }
-                console.log('eval() is FALSE')
+                // console.log('eval() is FALSE')
                 return false;
             }
         } else if (typeof(eval(solutions[difficultyLevel][randomProblemIndex])) === 'object') {
             if (eval(userInputText).join(', ') === eval(solutions[difficultyLevel][randomProblemIndex]).join(', ')) {
                 setPetSize(petSize + 20)
-                console.log('eval() is TRUE')
+                // console.log('eval() is TRUE')
                 return true;
             } else {
                 if (petSize >= 40) {
                     setPetSize(petSize - 20) 
                 }
-                console.log('eval() is FALSE')
+                // console.log('eval() is FALSE')
                 return false;
             }
         } 
