@@ -30,16 +30,19 @@ In addition to meeting the client's requirements, I set a personal goal to focus
 
 ## :pencil2: Planning & Problem Solving
 **Wireframes:**
+
 Before beginning the development process, I started by creating wireframes to visualize the layout and structure of the Tamagotchi app. The wireframes helped me plan the placement of different components and ensure a user-friendly interface. 
 
 ![image of the wireframes for the app](./resources/wireframes.png)
 
 **App Architecture:**
+
 To ensure a well-structured and maintainable codebase, I designed the architecture of the Tamagotchi app. I followed a modular approach, separating different functionalities into components as you will not in my codebase. This allowed for easier development, debugging, and future enhancements. 
 
-<img src="./resources/app_architecture.png" alt="image of the architecture for the app" width="auto" height="200px">
+<img src="./resources/app_architecture.png" alt="image of the architecture for the app" width="auto" height="400px">
 
 **User Stories:**
+
 To ensure a user-friendly and intuitive user experience, I created user stories based on the client's requirements. User stories helped me define the features and interactions necessary to meet the client's expectations. Here are some example user stories:
 - As a user, I want to be greeted by the game when I open the app.
 - As a user, I want to see a visually appealing shrimp-like creature and a button indicating food on the screen after selecting an egg.
@@ -48,6 +51,7 @@ To ensure a user-friendly and intuitive user experience, I created user stories 
 - As a user, I want to click the "feed code" button next to the input to check my solution and see the creature's reaction.
 
 **Problem Solving Approach:**
+
 During the development process, I adopted a systematic approach to problem-solving. For more complex problems or issues, I followed these steps:
 
 1. *Identifying the Problem:* I first identified the specific problem or issue I encountered. This involved thoroughly understanding the desired behavior and comparing it to the actual behavior of the app.
