@@ -11,6 +11,7 @@ function CodingProblems({ difficultyLevel, setCorrectCode, setPetSize, petSize }
 
     let randomProblemIndex = Math.floor(Math.random() * problems[difficultyLevel].length);
     let randomProblem = problems[difficultyLevel][randomProblemIndex];
+    console.log('randomProblemIndex', randomProblemIndex)
     console.log('New random problem generated')
     
     const testUserInput = () => {
@@ -30,18 +31,32 @@ function CodingProblems({ difficultyLevel, setCorrectCode, setPetSize, petSize }
     const compareSolution = () => {
         const userInput = document.querySelector('textarea');
         let userInputText = userInput.value;
-  
-        if (eval(userInputText) === eval(solutions[difficultyLevel][randomProblemIndex])) {
-            setPetSize(petSize + 20)
-            console.log('eval() is TRUE')
-            return true;
-        } else {
-            if (petSize >= 40) {
-                setPetSize(petSize - 20) 
+        
+        if (typeof(eval(solutions[difficultyLevel][randomProblemIndex])) !== 'object') {
+            if (eval(userInputText) === eval(solutions[difficultyLevel][randomProblemIndex])) {
+                setPetSize(petSize + 20)
+                console.log('eval() is TRUE')
+                return true;
+            } else {
+                if (petSize >= 40) {
+                    setPetSize(petSize - 20) 
+                }
+                console.log('eval() is FALSE')
+                return false;
             }
-            console.log('eval() is FALSE')
-            return false;
-        }
+        } else if (typeof(eval(solutions[difficultyLevel][randomProblemIndex])) === 'object') {
+            if (eval(userInputText).join(', ') === eval(solutions[difficultyLevel][randomProblemIndex]).join(', ')) {
+                setPetSize(petSize + 20)
+                console.log('eval() is TRUE')
+                return true;
+            } else {
+                if (petSize >= 40) {
+                    setPetSize(petSize - 20) 
+                }
+                console.log('eval() is FALSE')
+                return false;
+            }
+        } 
     }
 
     return (

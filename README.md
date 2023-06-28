@@ -73,8 +73,7 @@ By following this problem-solving approach, I aimed to ensure the stability and 
 
 ## :scream: Bugs to fix :poop:
 - Not enough coding problems inside the CodingProblemnsData.js file, which results in the same problem coming up multiple times in a row sometimes.
-- If random letters/text is written in the input field without quatations the code won't be evaluated by the eval() (line 26, CodingProblems component) and the 'Feed code' button doesn't redirect the user to the next page due to an error that can only be seing in development mode(letters/text is not defined). The eval() takes that input as if it's a variable, that hasn't been defined. From the UX point of view there's no warning to tell the user why this is happening and the codebase doesn't take this case into account.
-- Certain coding problems don't work with the eval() function, produce an error ") is missing after arguments list" and result in the above described UX. Ended up removing some problems.
+- If random letters/text is written in the input field without quotations the code won't be evaluated by the eval() (line 26, CodingProblems component) and the 'Feed code' button doesn't redirect the user to the next page due to an error that can only be seing in development mode(letters/text is not defined). The eval() takes that input as if it's a variable, that hasn't been defined. From the UX point of view there's no warning to tell the user why this is happening and the codebase doesn't take this case into account.
 - When selecting the difficulty/eggs the selected egg starts floating up and down, but when a different egg is selected, the previously selected egg still keeps on floating, which would be confusing for the user. This is due to the settings inside the Spline objects.
 
 ## :sob: Lessons learnt
