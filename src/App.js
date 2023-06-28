@@ -20,6 +20,7 @@ function App() {
         <EggSelection 
         setDifficultyLevel={setDifficultyLevel}
         difficultyLevel={difficultyLevel}
+        setCorrectCode={setCorrectCode}
         />}></Route>
         <Route path='/pet' element={<Pet 
         correctCode={correctCode}
