@@ -35,7 +35,7 @@ Before beginning the development process, I started by creating wireframes to vi
 
 **App Architecture:**
 To ensure a well-structured and maintainable codebase, I designed the architecture of the Tamagotchi app. I followed a modular approach, separating different functionalities into components as you will not in my codebase. This allowed for easier development, debugging, and future enhancements. 
-![image of the architecture for the app](./resources/app_architecture.png)
+![image of the architecture for the app](./resources/app_architecture.png){width="200" height="auto"}
 
 **User Stories:**
 To ensure a user-friendly and intuitive user experience, I created user stories based on the client's requirements. User stories helped me define the features and interactions necessary to meet the client's expectations. Here are some example user stories:
